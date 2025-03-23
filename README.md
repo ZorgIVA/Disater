@@ -1,6 +1,9 @@
 # Домашнее задание к занятию 1 «Disaster recovery и Keepalived»
 
 # Задание 1
+
+[Схема](https://github.com/ZorgIVA/Disater/blob/master/img/hsrp.pkt)
+
 Дана схема для Cisco Packet Tracer, рассматриваемая в лекции.
 На данной схеме уже настроено отслеживание интерфейсов маршрутизаторов Gi0/1 (для нулевой группы)
 Необходимо аналогично настроить отслеживание состояния интерфейсов Gi0/0 (для первой группы).
@@ -20,6 +23,6 @@
 
 Bash-скрипт: [check.sh](https://github.com/ZorgIVA/Disater/blob/master/img/check.sh)
 
-https://github.com/ZorgIVA/Disater/blob/master/img/check.sh
+
 
 
