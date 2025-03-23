@@ -28,7 +28,7 @@ if [[ $(netstat -ant | grep LISTEN | grep :80) ]] && [[ -f /var/www/html/index.n
   exit 0
 else
   sudo systemctl stop keepalived
-fi
+fi```
 
 
 **MASTER** [keepalived11.conf](https://github.com/ZorgIVA/Disater/blob/master/img/keepalived11.conf)
@@ -53,7 +53,7 @@ vrrp_instance VI_1 {
                 check
         }
 
-}
+}```
 
 **BACKUP** [keepalived22.conf](https://github.com/ZorgIVA/Disater/blob/master/img/keepalived22.conf)
 
