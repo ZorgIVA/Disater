@@ -23,6 +23,16 @@
 
 Bash-скрипт: [check.sh](https://github.com/ZorgIVA/Disater/blob/master/img/check.sh)
 
+#!/bin/bash
+if [[ $(netstat -ant | grep LISTEN | grep :80) ]] && [[ -f /var/www/html/index.nginx-debian.html ]]; then
+  exit 0
+else
+  sudo systemctl stop keepalived
+fi
 
 
+**MASTER** [keepalived11.conf](https://github.com/ZorgIVA/Disater/blob/master/img/keepalived11.conf)
+
+
+**BACKUP** [keepalived22.conf](https://github.com/ZorgIVA/Disater/blob/master/img/keepalived22.conf)
 
