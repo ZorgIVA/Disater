@@ -20,3 +20,6 @@
 
 img/check.sh
 
+https://github.com/ZorgIVA/Disater/blob/master/img/check.sh
+
+
