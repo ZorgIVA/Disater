@@ -23,7 +23,7 @@
 
 Bash-скрипт: [check.sh](https://github.com/ZorgIVA/Disater/blob/master/img/check.sh)
 
-#!/bin/bash
+```#!/bin/bash
 if [[ $(netstat -ant | grep LISTEN | grep :80) ]] && [[ -f /var/www/html/index.nginx-debian.html ]]; then
   exit 0
 else
