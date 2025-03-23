@@ -71,3 +71,6 @@ vrrp_instance VI_1 {
 }
 
 
+<img src = "img\2_1.jpg" width = 100%>
+
+<img src = "img\2_2.jpg" width = 100%>
