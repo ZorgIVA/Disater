@@ -23,35 +23,35 @@
 
 Bash-скрипт: [check.sh](https://github.com/ZorgIVA/Disater/blob/master/img/check.sh)
 
-``#!/bin/bash
-if [[ $(netstat -ant | grep LISTEN | grep :80) ]] && [[ -f /var/www/html/index.nginx-debian.html ]]; then
-  exit 0
-else
-  sudo systemctl stop keepalived
+#!/bin/bash
+if [[ $(netstat -ant | grep LISTEN | grep :80) ]] && [[ -f /var/www/html/index.nginx-debian.html ]]; then  
+  exit 0  
+else  
+  sudo systemctl stop keepalived  
 fi
 
 
 **MASTER** [keepalived11.conf](https://github.com/ZorgIVA/Disater/blob/master/img/keepalived11.conf)
 
-``vrrp_script check {
-        script "/home/iva/check.sh"
-        interval 3
-}
+vrrp_script check {  
+        script "/home/iva/check.sh"  
+        interval 3  
+}  
 
-vrrp_instance VI_1 {
-        state MASTER
-        interface enp0s3
-        virtual_router_id 15
-        priority 255
-        advert_int 1
+vrrp_instance VI_1 {  
+        state MASTER  
+        interface enp0s3  
+        virtual_router_id 15  
+        priority 255  
+        advert_int 1  
 
-        virtual_ipaddress {
-                192.168.123.99/24
-        }
+        virtual_ipaddress {  
+                192.168.123.99/24  
+        }  
 
-        track_script {
-                check
-        }
+        track_script {  
+                check  
+        }  
 
 }
 
