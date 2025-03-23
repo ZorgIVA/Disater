@@ -33,7 +33,7 @@ fi
 
 **MASTER** [keepalived11.conf](https://github.com/ZorgIVA/Disater/blob/master/img/keepalived11.conf)
 
-vrrp_script check_server {
+`vrrp_script check_server {
         script "/home/tverdyakov/check_server.sh"
         interval 3
 }
@@ -53,7 +53,7 @@ vrrp_instance VI_1 {
                 check_server
         }
 
-}
+}`
 
 **BACKUP** [keepalived22.conf](https://github.com/ZorgIVA/Disater/blob/master/img/keepalived22.conf)
 
